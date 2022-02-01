@@ -100,7 +100,7 @@ const Spreadsheet = (props: SpreadsheetInitializer): JSX.Element => {
                       isSelected={isSelected}
                       value={isSelected ? formula : cell.parsedValue}
                       onChange={(e) => setFormula(e.target.value)}
-                      onClick={() => switchSelectedCell(index, cellIndex)}
+                      onFocus={() => switchSelectedCell(index, cellIndex)}
                       onBlur={() => onUpdateCell(index, cellIndex)}
                     />
                   );
